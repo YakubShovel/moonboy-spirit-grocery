@@ -1,9 +1,9 @@
 ---
+date: 2026-11-12
 title: Focused or radiated?
 aisle: journal
 order: 4
-written: 11/10
-scan: /img/focused-or-radiated.jpg
+scan: /img/focused-or-radiated-ink.png
 ---
 Do I want to be focused or radiated? Channeled or expanded? Or something else? I have spent lots of time thinking about what I want a partner to be like, what I want to do with her, what it would feel like. But I never wondered what I would be like. What I want to be like. Is a partner someone to spend time with or something else? Someone to comfort or someone to challenge?
 

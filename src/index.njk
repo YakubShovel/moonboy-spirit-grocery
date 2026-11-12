@@ -29,7 +29,7 @@ title: Home
 <ol class="shelf">
   {%- for item in collections.shelf %}
   <li class="item item--{{ item.data.aisle }}" data-aisle="{{ item.data.aisle }}">
-    <span class="aisle-tag">{{ item.data.aisle }}{% if item.data.written %} · {{ item.data.written }}{% endif %}</span>
+    <span class="aisle-tag">{{ item.data.aisle }}</span>
 
     {%- if item.data.aisle == "journal" %}
     <a href="{{ item.url }}" class="journal-link">
@@ -54,6 +54,7 @@ title: Home
       </div>
     </div>
     {%- endif %}
+    <time class="stocked" datetime="{{ item.date | htmlDateString }}">stocked {{ item.date | stockedDate }}</time>
   </li>
   {%- endfor %}
 </ol>

@@ -1,4 +1,5 @@
 ---
+date: 2026-11-12
 title: King Without a Crown, live from Stubb's
 aisle: listening
 order: 2

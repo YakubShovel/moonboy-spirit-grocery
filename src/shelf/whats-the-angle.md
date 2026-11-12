@@ -1,8 +1,9 @@
 ---
+date: 2026-11-12
 title: What's the angle? It's me.
 aisle: journal
 order: 1
-scan: /img/whats-the-angle.jpg
+scan: /img/whats-the-angle-ink.png
 ---
 What's the angle? It's me.
 

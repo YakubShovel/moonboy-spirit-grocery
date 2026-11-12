@@ -1,8 +1,9 @@
 ---
+date: 2026-11-12
 title: Close the tap.
 aisle: journal
 order: 5
-scan: /img/close-the-tap.jpg
+scan: /img/close-the-tap-ink.png
 ---
 Chewing fast to get to the next mouthful.
 Teasing awake a chafed, tired penis.

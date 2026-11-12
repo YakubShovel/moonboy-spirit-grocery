@@ -344,3 +344,25 @@ body.about::before {
   body { padding: 2rem 1.25rem; }
   .register, .shelf { grid-template-columns: 1fr; }
 }
+
+/* ─── Ink: the page is the journal ──────────────────────── */
+.journal-link img {
+  aspect-ratio: auto;
+  max-height: 22rem;
+  object-fit: contain;
+  object-position: top left;
+}
+.scan img { box-shadow: none; }
+
+/* ─── Freshness ─────────────────────────────────────────── */
+.shelf .item { display: flex; flex-direction: column; }
+.stocked {
+  display: block;
+  margin-top: auto;
+  padding-top: 0.9rem;
+  font-size: 0.7rem;
+  color: var(--muted);
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+.post-header .stocked { margin-top: 0.3rem; padding-top: 0; }

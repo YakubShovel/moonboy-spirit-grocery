@@ -1,4 +1,5 @@
 ---
+date: 2026-11-12
 title: goodsugar
 aisle: rec
 order: 3

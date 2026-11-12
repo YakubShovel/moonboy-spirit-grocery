@@ -31,6 +31,11 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  eleventyConfig.addFilter("stockedDate", (d) => {
+    const date = d instanceof Date ? d : new Date(d);
+    return date.toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
+  });
+
   return {
     dir: {
       input: "src",
