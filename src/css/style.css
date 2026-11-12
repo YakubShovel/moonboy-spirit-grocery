@@ -432,3 +432,16 @@ body.about::before {
           mask-image: radial-gradient(ellipse at center, #000 45%, transparent 75%);
 }
 html { overflow-x: hidden; }
+
+/* About: square cover, centered behind the words */
+body.about::before {
+  background-image: url("/img/back-cover-square.jpg");
+  background-size: min(64vh, 88vw);
+  background-position: center 58%;
+  opacity: 0.18;
+  -webkit-mask-image: radial-gradient(circle at center 58%, #000 40%, transparent 72%);
+          mask-image: radial-gradient(circle at center 58%, #000 40%, transparent 72%);
+}
+.about-page { margin: 0 auto; text-align: center; padding-top: 22vh; }
+.stockroom-door { width: 5.5rem; }
+.stockroom-door span { display: block; margin-top: 0.5rem; }

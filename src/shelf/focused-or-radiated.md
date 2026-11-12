@@ -1,6 +1,6 @@
 ---
 date: 2026-11-12
-title: Focused or radiated?
+title: "8am, Tuesday 11/10 @ Variety Coffee"
 aisle: journal
 order: 4
 scan: /img/focused-or-radiated-ink.png
