@@ -445,3 +445,14 @@ body.about::before {
 .about-page { margin: 0 auto; text-align: center; padding-top: 22vh; }
 .stockroom-door { width: 5.5rem; }
 .stockroom-door span { display: block; margin-top: 0.5rem; }
+
+/* ─── Practices: a take-home coupon ─────────────────────── */
+.shelf .item--practice {
+  border: 1.5px dashed #b9b2a3;
+  background: #fbf6e9;
+}
+.item--practice .item-title { font-size: 1.25rem; }
+.practice-body { margin-top: 0.6rem; font-size: 0.9rem; line-height: 1.6; }
+.practice-body p { margin-bottom: 0.7em; }
+.practice-from { font-size: 0.75rem; color: var(--muted); }
+.item--practice .aisle-tag::after { content: " · take one"; }

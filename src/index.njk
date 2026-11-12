@@ -26,6 +26,7 @@ title: Home
 <nav class="aisles" aria-label="Aisles">
   <button data-aisle="all" aria-pressed="true">everything</button>
   <button data-aisle="journal">journal</button>
+  <button data-aisle="practice">practices</button>
   <button data-aisle="rec">recs</button>
   <button data-aisle="listening">listening</button>
 </nav>
@@ -40,6 +41,11 @@ title: Home
       <img src="{{ item.data.scan }}" alt="{{ item.content | striptags | truncate(300) }}" loading="lazy">
       <span class="item-title">{{ item.data.title }}</span>
     </a>
+
+    {%- elif item.data.aisle == "practice" %}
+    <span class="item-title">{{ item.data.title }}</span>
+    <div class="practice-body">{{ item.content | safe }}</div>
+    {%- if item.data.from %}<a class="practice-from" href="{{ item.data.from }}">from the journal →</a>{% endif %}
 
     {%- elif item.data.aisle == "listening" %}
     <span class="item-title">{{ item.data.title }}</span>
