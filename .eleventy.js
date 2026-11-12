@@ -2,13 +2,18 @@ const markdownIt = require("markdown-it");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/img");
+  eleventyConfig.addPassthroughCopy("src/js");
 
   // Breaks: true turns single newlines into <br> — essential for poetry
   const md = markdownIt({ html: true, breaks: true, linkify: false });
   eleventyConfig.setLibrary("md", md);
 
-  eleventyConfig.addCollection("posts", function (api) {
-    return api.getFilteredByGlob("src/posts/*.md").reverse();
+  // The shelf: everything in the store, hand-ordered by `order` (lowest = front of the store)
+  eleventyConfig.addCollection("shelf", function (api) {
+    return api
+      .getFilteredByGlob("src/shelf/*.md")
+      .sort((a, b) => (a.data.order ?? 999) - (b.data.order ?? 999));
   });
 
   eleventyConfig.addFilter("htmlDateString", (d) => {

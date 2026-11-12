@@ -144,3 +144,165 @@ main a:not(.site-name):not(.post-list a) {
 main a:not(.site-name):not(.post-list a):hover {
   text-decoration-color: var(--ink);
 }
+
+/* ─── The sign ──────────────────────────────────────────── */
+.sign {
+  font-style: italic;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: -2.75rem 0 3rem;
+}
+
+/* ─── Taped up by the register ──────────────────────────── */
+.register {
+  display: grid;
+  gap: 1.75rem;
+  margin-bottom: 4rem;
+}
+
+.taped {
+  position: relative;
+  background: #fffefb;
+  padding: 1.1rem 1.25rem 0.9rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+  max-width: 30rem;
+}
+.taped:nth-child(1) { transform: rotate(-0.8deg); }
+.taped:nth-child(2) { transform: rotate(0.5deg); margin-left: auto; }
+.taped:nth-child(3) { transform: rotate(-0.3deg); margin-left: 8%; }
+
+/* a strip of tape, barely there */
+.taped::before {
+  content: "";
+  position: absolute;
+  top: -0.55rem;
+  left: 50%;
+  width: 4.5rem;
+  height: 1.1rem;
+  transform: translateX(-50%) rotate(-2deg);
+  background: rgba(225, 215, 190, 0.45);
+}
+
+.taped cite {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-style: normal;
+}
+
+/* ─── Aisles ────────────────────────────────────────────── */
+.aisles {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+}
+
+.aisles button {
+  font: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--muted);
+  cursor: pointer;
+  letter-spacing: 0.03em;
+}
+
+.aisles button[aria-pressed="true"] {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+/* ─── The shelf ─────────────────────────────────────────── */
+.shelf { list-style: none; }
+
+.shelf .item {
+  padding: 2rem 0;
+  border-top: 1px solid #e8e6e1;
+}
+
+.aisle-tag {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+
+.item-title { font-size: 1.1rem; }
+
+.shelf a.item-title,
+.journal-link { color: var(--ink); text-decoration: none; }
+.shelf a.item-title:hover,
+.journal-link:hover .item-title { text-decoration: underline; }
+
+.journal-link { display: flex; gap: 1.25rem; align-items: center; }
+
+.journal-link img {
+  width: 7.5rem;
+  flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+.note { margin-top: 0.4rem; }
+.where { font-size: 0.8rem; color: var(--muted); font-style: italic; }
+
+.embed {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  max-width: 22rem;
+  margin: 0.75rem 0 0.25rem;
+}
+.item-page .embed { max-width: none; margin-bottom: 2rem; }
+.embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* ─── Item pages ────────────────────────────────────────── */
+.scan { margin: 0 0 2rem; }
+.scan img { width: 100%; height: auto; display: block; box-shadow: 0 1px 4px rgba(0,0,0,0.12); }
+
+.typed summary {
+  font-size: 0.8rem;
+  color: var(--muted);
+  cursor: pointer;
+  margin-bottom: 1.25rem;
+}
+
+.post-body.poem p { margin-bottom: 1.2em; }
+.item-page .post-body p { margin-bottom: 1.2em; }
+
+.back { margin-top: 3rem; font-size: 0.85rem; }
+
+/* ─── The back of the store ─────────────────────────────── */
+.back-of-store {
+  margin-top: 6rem;
+  padding-top: 3rem;
+  border-top: 1px solid #e0ded9;
+  text-align: center;
+}
+
+.back-cover img {
+  width: 9rem;
+  height: auto;
+  transform: rotate(2deg);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+.back-cover:hover img { transform: rotate(0deg) scale(1.04); }
+
+.back-of-store p {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (max-width: 540px) {
+  html { font-size: 18px; }
+  body { padding: 2rem 1.25rem; }
+  .taped:nth-child(n) { margin-left: 0; }
+}

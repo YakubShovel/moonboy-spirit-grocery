@@ -2,11 +2,55 @@
 layout: base.njk
 title: Home
 ---
-<ul class="post-list">
-  {%- for post in collections.posts %}
-  <li>
-    <a href="{{ post.url }}">{{ post.data.title }}</a>
-    <time>{{ post.date | readableDate }}</time>
+<p class="sign">Nothing here is for sale.</p>
+
+<section class="register" aria-label="Taped up by the register">
+  <blockquote class="taped">
+    <p>“It was an individual heart. It was already at its work of beginning at the beginning.”</p>
+    <cite>Rilke</cite>
+  </blockquote>
+  <blockquote class="taped">
+    <p>“Why do they always teach us that it’s easy and evil to do what we want and that we need to restrain ourselves? It’s the hardest thing in the world — to do what we want.”</p>
+    <cite>Rand, <i>The Fountainhead</i></cite>
+  </blockquote>
+  <blockquote class="taped">
+    <p>“The sound of silence is all the instruction you’ll get.”</p>
+    <cite>Kerouac</cite>
+  </blockquote>
+</section>
+
+<nav class="aisles" aria-label="Aisles">
+  <button data-aisle="all" aria-pressed="true">everything</button>
+  <button data-aisle="journal">journal</button>
+  <button data-aisle="rec">recs</button>
+  <button data-aisle="listening">listening</button>
+</nav>
+
+<ol class="shelf">
+  {%- for item in collections.shelf %}
+  <li class="item item--{{ item.data.aisle }}" data-aisle="{{ item.data.aisle }}">
+    <span class="aisle-tag">{{ item.data.aisle }}{% if item.data.written %} · {{ item.data.written }}{% endif %}</span>
+
+    {%- if item.data.aisle == "journal" %}
+    <a href="{{ item.url }}" class="journal-link">
+      <img src="{{ item.data.scan }}" alt="Journal page: {{ item.data.title }}" loading="lazy">
+      <span class="item-title">{{ item.data.title }}</span>
+    </a>
+
+    {%- elif item.data.aisle == "listening" %}
+    <span class="item-title">{{ item.data.title }}</span>
+    <div class="embed">
+      <iframe src="https://www.youtube-nocookie.com/embed/{{ item.data.youtube }}" title="{{ item.data.title }}" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p class="note">{{ item.data.note }}</p>
+
+    {%- else %}
+    <a href="{{ item.data.link }}" class="item-title" target="_blank" rel="noopener">{{ item.data.title }}</a>
+    <p class="note">{{ item.data.note }}</p>
+    {%- if item.data.where %}<p class="where">{{ item.data.where }}</p>{% endif %}
+    {%- endif %}
   </li>
   {%- endfor %}
-</ul>
+</ol>
+
+<script src="/js/aisles.js" defer></script>
