@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+<body class="{{ bodyClass or '' }}">
   <header class="site-header">
     <a href="/" class="site-name">moonboy spirit grocery</a>
     <nav>
@@ -20,11 +20,5 @@
   <main>
     {{ content | safe }}
   </main>
-  <footer class="back-of-store">
-    <a href="/img/back-cover.jpg" class="back-cover" title="the back of the store">
-      <img src="/img/back-cover.jpg" alt="The back cover of the notebook, covered in stickers" loading="lazy" width="1100" height="1349">
-    </a>
-    <p>the back of the store</p>
-  </footer>
 </body>
 </html>

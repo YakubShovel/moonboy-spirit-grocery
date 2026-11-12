@@ -1,14 +1,10 @@
 ---
 layout: base.njk
 title: About
+bodyClass: about
 ---
-<article class="post">
-  <header class="post-header">
-    <h1>About</h1>
-  </header>
-  <div class="page-body">
-
-This website is a journal of sorts. A place for me to get some things out. A form of CBT for me to practice knowing that what is inside me is worthy of getting out.
-
-  </div>
+<article class="about-page">
+  <h1>Moonboy Spirit Grocery</h1>
+  <p>Home to all that is flowing in and out of me.</p>
+  <p>A new kind of grocery store: carefully selected, nutritious, free.</p>
 </article>

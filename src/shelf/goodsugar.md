@@ -3,6 +3,7 @@ title: goodsugar
 aisle: rec
 order: 3
 link: https://ilovegoodsugar.com
+logo: /img/goodsugar.png
 where: 1186 Third Ave, Upper East Side
 note: Get the cocoa au lait. Best coconut thing I've ever had.
 ---

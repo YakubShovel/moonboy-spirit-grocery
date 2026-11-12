@@ -9,12 +9,8 @@ layout: base.njk
 
   {%- if scan %}
   <figure class="scan">
-    <a href="{{ scan }}"><img src="{{ scan }}" alt="Journal page: {{ title }}"></a>
+    <a href="{{ scan }}"><img src="{{ scan }}" alt="{{ content | striptags }}"></a>
   </figure>
-  <details class="typed" open>
-    <summary>typed up</summary>
-    <div class="post-body poem">{{ content | safe }}</div>
-  </details>
   {%- else %}
   {%- if youtube %}
   <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/{{ youtube }}" title="{{ title }}" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div>

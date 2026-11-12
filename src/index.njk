@@ -7,15 +7,15 @@ title: Home
 <section class="register" aria-label="Taped up by the register">
   <blockquote class="taped">
     <p>“It was an individual heart. It was already at its work of beginning at the beginning.”</p>
-    <cite>Rilke</cite>
+    <cite>Rainer Maria Rilke, <i>The Notebooks of Malte Laurids Brigge</i></cite>
   </blockquote>
   <blockquote class="taped">
     <p>“Why do they always teach us that it’s easy and evil to do what we want and that we need to restrain ourselves? It’s the hardest thing in the world — to do what we want.”</p>
-    <cite>Rand, <i>The Fountainhead</i></cite>
+    <cite>Ayn Rand, <i>The Fountainhead</i></cite>
   </blockquote>
   <blockquote class="taped">
     <p>“The sound of silence is all the instruction you’ll get.”</p>
-    <cite>Kerouac</cite>
+    <cite>Jack Kerouac, <i>Desolation Angels</i></cite>
   </blockquote>
 </section>
 
@@ -33,7 +33,7 @@ title: Home
 
     {%- if item.data.aisle == "journal" %}
     <a href="{{ item.url }}" class="journal-link">
-      <img src="{{ item.data.scan }}" alt="Journal page: {{ item.data.title }}" loading="lazy">
+      <img src="{{ item.data.scan }}" alt="{{ item.content | striptags | truncate(300) }}" loading="lazy">
       <span class="item-title">{{ item.data.title }}</span>
     </a>
 
@@ -45,9 +45,14 @@ title: Home
     <p class="note">{{ item.data.note }}</p>
 
     {%- else %}
-    <a href="{{ item.data.link }}" class="item-title" target="_blank" rel="noopener">{{ item.data.title }}</a>
-    <p class="note">{{ item.data.note }}</p>
-    {%- if item.data.where %}<p class="where">{{ item.data.where }}</p>{% endif %}
+    <div class="rec">
+      {%- if item.data.logo %}<a href="{{ item.data.link }}" target="_blank" rel="noopener"><img class="rec-logo" src="{{ item.data.logo }}" alt="{{ item.data.title }} logo"></a>{% endif %}
+      <div>
+        <a href="{{ item.data.link }}" class="item-title" target="_blank" rel="noopener">{{ item.data.title }}</a>
+        <p class="note">{{ item.data.note }}</p>
+        {%- if item.data.where %}<p class="where">{{ item.data.where }}</p>{% endif %}
+      </div>
+    </div>
     {%- endif %}
   </li>
   {%- endfor %}
