@@ -366,3 +366,69 @@ body.about::before {
   letter-spacing: 0.02em;
 }
 .post-header .stocked { margin-top: 0.3rem; padding-top: 0; }
+
+/* ─── Packed shelves: cards in different sizes ──────────── */
+.shelf {
+  grid-auto-rows: 10rem;
+  grid-auto-flow: dense;
+}
+.item--journal   { grid-row: span 3; }
+.item--listening { grid-column: span 2; grid-row: span 2; }
+.item--rec       { grid-row: span 2; }
+.item--event     { grid-row: span 1; }
+.shelf .item { overflow: hidden; }
+
+/* ─── Doodles in the margins ────────────────────────────── */
+main { position: relative; }
+.doodle {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.75;
+  z-index: 0;
+}
+.doodle--bubbles { width: 4.5rem; top: -6.5rem; right: -1rem; transform: rotate(8deg); }
+.doodle--blob    { width: 8rem; right: -3rem; margin-top: -4.5rem; transform: rotate(-12deg); }
+.register, .aisles, .shelf { position: relative; z-index: 1; }
+
+.stockroom-door {
+  display: block;
+  width: 7rem;
+  margin: 4rem auto 0;
+  text-align: center;
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-style: italic;
+}
+.stockroom-door img { width: 100%; transition: transform 0.3s ease; }
+.stockroom-door:hover img { transform: rotate(-3deg); }
+
+.stock-list { list-style: none; }
+.stock-list li { padding: 0.8rem 0; border-top: 1px solid #e8e6e1; }
+
+/* ─── About: smaller, a bit more visible ────────────────── */
+body.about::before {
+  background-size: auto 70vh;
+  background-position: 85% 60%;
+  opacity: 0.16;
+}
+
+@media (max-width: 820px) {
+  .item--listening { grid-column: span 2; }
+  .doodle--blob { display: none; }
+}
+@media (max-width: 560px) {
+  .shelf { grid-auto-rows: auto; }
+  .item--journal, .item--listening, .item--rec, .item--event { grid-row: auto; grid-column: auto; }
+  .doodle { display: none; }
+}
+
+/* masonry: JS sizes each card to its content (see /js/aisles.js) */
+.shelf.masonry { grid-auto-rows: 4px; row-gap: 0; }
+.shelf.masonry .item { grid-row: auto; margin-bottom: 1.5rem; }
+.doodle--bubbles { top: 0.25rem; right: 0.5rem; }
+body.about::before {
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 45%, transparent 75%);
+          mask-image: radial-gradient(ellipse at center, #000 45%, transparent 75%);
+}
+html { overflow-x: hidden; }

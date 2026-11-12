@@ -1,0 +1,24 @@
+---
+layout: base.njk
+title: Stockroom
+---
+<article class="stockroom">
+  <header class="post-header">
+    <h1>The stockroom</h1>
+    <p class="sign">Off the shelves, not thrown out.</p>
+  </header>
+  {%- if collections.stockroom.length %}
+  <ol class="stock-list">
+    {%- for item in collections.stockroom %}
+    <li>
+      <span class="aisle-tag">{{ item.data.aisle }}</span>
+      <a href="{{ item.data.link if item.data.aisle == 'rec' else item.url }}">{{ item.data.title }}</a>
+      <time class="stocked">stocked {{ item.date | stockedDate }}</time>
+    </li>
+    {%- endfor %}
+  </ol>
+  {%- else %}
+  <p>Empty for now. Everything's still fresh.</p>
+  {%- endif %}
+  <p class="back"><a href="/">← back to the shelf</a></p>
+</article>

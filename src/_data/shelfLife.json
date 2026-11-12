@@ -1,0 +1,7 @@
+{
+  "_comment": "Days an item stays on the front shelves after it's stocked. null = never spoils. Events expire the day after their `when` date.",
+  "listening": 14,
+  "rec": null,
+  "journal": null,
+  "event": 0
+}
