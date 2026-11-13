@@ -6,8 +6,8 @@ order: 3
 link: https://ilovegoodsugar.com
 logo: /img/goodsugar.png
 where: 1186 Third Ave, Upper East Side
-note: Get the cocoa au lait. Best coconut thing I've ever had.
+note: Try the coco au lait. Brought me back to life after a hard Bikram session Tuesday night.
 ---
-Get the cocoa au lait. Best coconut thing I've ever had.
+Try the coco au lait. Brought me back to life after a hard Bikram session Tuesday night.
 
 Vegan juice and food on Third Ave between 69th and 70th. [ilovegoodsugar.com](https://ilovegoodsugar.com)
