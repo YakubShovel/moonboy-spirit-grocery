@@ -532,3 +532,22 @@ a { color: var(--navy); }
   .awning-sign { width: 6.5rem; height: 6.5rem; top: 0.8rem; }
   .awning { margin-bottom: 4rem; }
 }
+
+/* ─── Storefront line under the awning ──────────────────── */
+.storefront-line {
+  text-align: center;
+  font-style: italic;
+  color: var(--navy);
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  margin: -1.5rem 0 3.5rem;
+}
+
+/* ─── Words: quotes as stock ────────────────────────────── */
+.shelf .item--words { background: var(--navy); border-color: var(--navy); color: #f3efe4; }
+.item--words .aisle-tag { color: var(--ube-soft); }
+.item--words .stocked { color: rgba(243,239,228,0.55); }
+.words { font-size: 1.05rem; line-height: 1.55; }
+.words p { margin: 0; }
+.words-by { margin-top: 0.8rem; font-size: 0.78rem; color: var(--ube-soft); }
+.doodle--blob { right: auto; left: 8%; margin-top: 2rem; transform: rotate(-8deg); }

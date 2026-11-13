@@ -2,32 +2,17 @@
 layout: base.njk
 title: Home
 ---
-<p class="sign">Nothing here is for sale.</p>
+<p class="storefront-line">A new kind of grocery.</p>
 
 <img class="doodle doodle--bubbles" src="/img/doodle-bubbles.png" alt="" aria-hidden="true">
 
-<section class="register" aria-label="Taped up by the register">
-  <blockquote class="taped">
-    <p>“It was an individual heart. It was already at its work of beginning at the beginning.”</p>
-    <cite>Rainer Maria Rilke, <i>The Notebooks of Malte Laurids Brigge</i></cite>
-  </blockquote>
-  <blockquote class="taped">
-    <p>“Why do they always teach us that it’s easy and evil to do what we want and that we need to restrain ourselves? It’s the hardest thing in the world — to do what we want.”</p>
-    <cite>Ayn Rand, <i>The Fountainhead</i></cite>
-  </blockquote>
-  <blockquote class="taped">
-    <p>“The sound of silence is all the instruction you’ll get.”</p>
-    <cite>Jack Kerouac, <i>Desolation Angels</i></cite>
-  </blockquote>
-</section>
-
-<img class="doodle doodle--blob" src="/img/doodle-blob.png" alt="" aria-hidden="true">
 
 <nav class="aisles" aria-label="Aisles">
   <button data-aisle="all" aria-pressed="true">everything</button>
   <button data-aisle="journal">journal</button>
   <button data-aisle="practice">practices</button>
   <button data-aisle="rec">recs</button>
+  <button data-aisle="words">words</button>
   <button data-aisle="listening">listening</button>
 </nav>
 
@@ -41,6 +26,10 @@ title: Home
       <img src="{{ item.data.scan }}" alt="{{ item.content | striptags | truncate(300) }}" loading="lazy">
       <span class="item-title">{{ item.data.title }}</span>
     </a>
+
+    {%- elif item.data.aisle == "words" %}
+    <blockquote class="words">{{ item.content | safe }}</blockquote>
+    <p class="words-by">{{ item.data.by }}{% if item.data.source %}, <i>{{ item.data.source }}</i>{% endif %}</p>
 
     {%- elif item.data.aisle == "practice" %}
     <span class="item-title">{{ item.data.title }}</span>
@@ -68,6 +57,8 @@ title: Home
   </li>
   {%- endfor %}
 </ol>
+
+<img class="doodle doodle--blob" src="/img/doodle-blob.png" alt="" aria-hidden="true">
 
 <a class="stockroom-door" href="/stockroom/" title="the stockroom">
   <img src="/img/doodle-door.png" alt="A hand-drawn door to the stockroom">
