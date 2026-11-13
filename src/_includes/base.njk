@@ -9,13 +9,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="/img/favicon.png">
 </head>
 <body class="{{ bodyClass or '' }}">
-  <header class="site-header">
-    <a href="/" class="site-name">moonboy spirit grocery</a>
-    <nav>
-      <a href="/about/">about</a>
-    </nav>
+  <header class="awning">
+    <div class="awning-canopy">
+      <a href="/about/" class="awning-about">about</a>
+    </div>
+    <div class="awning-valance"></div>
+    <a href="/" class="awning-sign" aria-label="Moonboy Spirit Grocery, home">
+      <img src="/img/logo-badge.png" alt="Moonboy Spirit Grocery">
+    </a>
   </header>
   <main>
     {{ content | safe }}
