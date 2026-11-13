@@ -4,3 +4,14 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+# Old pages from the first version of the site: send them to the store, permanently.
+[[redirects]]
+  from = "/posts/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/about/*"
+  to = "/"
+  status = 301

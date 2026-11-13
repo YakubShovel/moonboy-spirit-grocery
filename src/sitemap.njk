@@ -1,0 +1,12 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://moonboy-spirit-grocery.com/</loc></url>
+  <url><loc>https://moonboy-spirit-grocery.com/stockroom/</loc></url>
+  {%- for item in collections.shelf %}
+  <url><loc>https://moonboy-spirit-grocery.com{{ item.url }}</loc><lastmod>{{ item.date | htmlDateString }}</lastmod></url>
+  {%- endfor %}
+</urlset>
