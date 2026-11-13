@@ -41,7 +41,7 @@ title: Home
     <div class="embed">
       <iframe src="https://www.youtube-nocookie.com/embed/{{ item.data.youtube }}" title="{{ item.data.title }}" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <p class="note">{{ item.data.note }}</p>
+    {%- if item.data.note %}<p class="note">{{ item.data.note }}</p>{% endif %}
 
     {%- else %}
     <div class="rec">
