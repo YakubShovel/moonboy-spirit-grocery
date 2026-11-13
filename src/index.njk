@@ -32,9 +32,9 @@ title: Home
     <p class="words-by">{{ item.data.by }}{% if item.data.source %}, <i>{{ item.data.source }}</i>{% endif %}</p>
 
     {%- elif item.data.aisle == "practice" %}
-    <span class="item-title">{{ item.data.title }}</span>
+    <a class="item-title" href="{{ item.url }}">{{ item.data.title }}</a>
     <div class="practice-body">{{ item.content | safe }}</div>
-    {%- if item.data.from %}<a class="practice-from" href="{{ item.data.from }}">from the journal →</a>{% endif %}
+    {%- if item.data.scan %}<a class="practice-from" href="{{ item.url }}">from the journal →</a>{% endif %}
 
     {%- elif item.data.aisle == "listening" %}
     <span class="item-title">{{ item.data.title }}</span>

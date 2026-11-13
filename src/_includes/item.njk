@@ -8,7 +8,13 @@ layout: base.njk
     <time class="stocked" datetime="{{ page.date | htmlDateString }}">stocked {{ page.date | stockedDate }}</time>
   </header>
 
+  {%- if aisle == "practice" %}
+  <div class="post-body practice-page">{{ content | safe }}</div>
   {%- if scan %}
+  <p class="aisle-tag practice-source">from the journal</p>
+  <figure class="scan"><a href="{{ scan }}"><img src="{{ scan }}" alt="Journal page"></a></figure>
+  {%- endif %}
+  {%- elif scan %}
   <figure class="scan">
     <a href="{{ scan }}"><img src="{{ scan }}" alt="{{ content | striptags }}"></a>
   </figure>

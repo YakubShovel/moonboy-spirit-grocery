@@ -551,3 +551,8 @@ a { color: var(--navy); }
 .words p { margin: 0; }
 .words-by { margin-top: 0.8rem; font-size: 0.78rem; color: var(--ube-soft); }
 .doodle--blob { right: auto; left: 8%; margin-top: 2rem; transform: rotate(-8deg); }
+
+/* rounded shelves */
+.shelf .item { border-radius: 12px; }
+.practice-page { background: #fbf6e9; border: 1.5px dashed #b9b2a3; border-radius: 12px; padding: 1.5rem 1.75rem; margin-bottom: 2.5rem; }
+.practice-source { margin-bottom: 1rem; }
