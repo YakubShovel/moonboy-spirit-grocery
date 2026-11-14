@@ -24,7 +24,6 @@ title: Home
     {%- if item.data.aisle == "journal" %}
     <a href="{{ item.url }}" class="journal-link">
       <img src="{{ item.data.scan }}" alt="{{ item.content | striptags | truncate(300) }}" loading="lazy">
-      <span class="item-title">{{ item.data.title }}</span>
     </a>
 
     {%- elif item.data.aisle == "words" %}
